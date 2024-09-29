@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-
-import { hashValue, verifyHash } from '@/utils/security';
 import { JwtService } from '@nestjs/jwt';
 import { GraphQLError } from 'graphql';
-import { DatabaseService } from 'src/database/database.service';
+
+import { DatabaseService } from '@/database/database.service';
+import { hashValue, verifyHash } from '@/utils/security';
 import { ILogin, IRegister } from './auth.interface';
 
 @Injectable()

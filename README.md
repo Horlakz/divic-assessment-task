@@ -48,7 +48,22 @@ Before setting up the project, ensure you have the following installed:
    ```
 
 2. **Access the Application**
+
    - The application should now be running on `http://localhost:8000`.
+
+3. **Run the Application tests (Optional)**
+
+   - for unit testing run
+
+   ```sh
+     pnpm test
+   ```
+
+   - for e2e testing run
+
+   ```sh
+      pnpm test:e2e
+   ```
 
 ## Testing the Endpoints
 

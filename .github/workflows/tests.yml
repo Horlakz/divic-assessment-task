@@ -43,7 +43,10 @@ jobs:
         run: pnpm install
 
       - name: Setup environment variables
-        run: echo "DATABASE_URL=postgresql://user:password@localhost:5432/test_db" >> $GITHUB_ENV
+        run: |
+          echo "DATABASE_URL=postgresql://user:password@localhost:5432/test_db" >> $GITHUB_ENV
+          echo "JWT_SECRET=secret" >> $GITHUB_ENV
+          echo "JWT_EXPIRES_IN=3600" >> $GITHUB_ENV
 
       - name: Run migrations
         run: npx prisma migrate deploy
